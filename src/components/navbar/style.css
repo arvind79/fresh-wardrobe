@@ -1,0 +1,138 @@
+.navbar-container {
+  flex-direction: column;
+  padding-inline: 0.7rem;
+  padding-top: 1rem;
+}
+
+.nav-upper {
+  flex-direction: row;
+  align-items: center;
+  color: var(--color-primary-light);
+}
+
+.nav-upper .shopkart {
+  font-weight: 275;
+  line-height: 1.7;
+}
+
+.nav-upper .upper-right {
+  margin-left: auto;
+  align-items: center;
+}
+
+.nav-upper .right-item {
+  display: none;
+}
+
+.nav-upper .btn {
+  background: var(--color-bg-texture-1);
+  color: white;
+  font-size: 1.5rem;
+  /* border: 1px solid white; */
+}
+
+
+/******* line *******/
+
+.line {
+  width: 100%;
+  height: 1px;
+  background: var(--color-primary-light);
+}
+
+
+/******* Navbar Lower *******/
+
+.nav-lower {
+  height: 87vh;
+  justify-content: center;
+  padding-top: 7rem;
+}
+
+.nav-links {
+  text-align: center;
+}
+
+.nav-links a {
+  color: var(--color-primary-light);
+  text-transform: uppercase;
+  font-family: 'Work Sans';
+  font-size: 1.625rem;
+  font-weight: 600;
+  filter: drop-shadow(0 0 23px black);
+}
+
+.nav-links li {
+  margin-bottom: 3.5rem;
+}
+
+.nav-links li:last-of-type {
+  margin-bottom: 0;
+}
+
+.show-nav {
+  display: flex;
+}
+
+.hide-nav {
+  display: none;
+}
+
+/******* Media Queries for large screen *******/
+
+@media screen and (min-width: 391px) {
+  .navbar-container {
+    padding-inline: 5rem 5rem;
+    padding-top: 0.5rem;
+  }
+
+  .nav-upper {
+    align-items: baseline;
+  }
+
+  .nav-upper .shopkart {
+    line-height: normal;
+  }
+
+  .nav-upper .upper-right {
+    gap: 0.63rem;
+    white-space: nowrap;
+  }
+
+  .nav-upper .right-item {
+    display: flex;
+    font-family: 'Work Sans';
+  }
+
+  .nav-upper .right-item:first-of-type {
+    margin-left: 2rem;
+  }
+
+  .nav-toggle-btn{
+    display: none;
+  }
+
+  /******** Navbar Lower *********/
+
+  .nav-lower {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 0.8rem;
+    height: fit-content;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: flex-start;
+    gap: 6rem;
+    white-space: nowrap;
+  }
+
+  .nav-links li {
+    margin-bottom: 0;
+  }
+
+  .nav-links a {
+    font-size: 1.125rem;
+  }
+}

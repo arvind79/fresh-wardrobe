@@ -1,0 +1,5 @@
+.header-container {
+  /* opacity: 0.5;
+  mix-blend-mode: overlay; */
+  background: var(--color-bg-texture-1);
+}
