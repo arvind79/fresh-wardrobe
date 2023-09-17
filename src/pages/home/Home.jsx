@@ -1,10 +1,10 @@
 import './style.css';
-
+import Products from '../../components/products/Products';
 
 const Home = () => {
   return (
     <>
-      
+      <Products />
     </>
   )
 }
