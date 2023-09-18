@@ -23,10 +23,17 @@ const linksArray = [
 
 const Navbar = () => {
   const [isNavShowing, setIsNavShowing] = useState(false);
+  const [isProductsShowing, setIsProductsShowing] = useState(false);
 
   const handleBtnClick = () => {
     setIsNavShowing((prev) => !prev);
   };
+
+  const handleProductClick = (valueName) => {
+    if(valueName == "Our Products") {
+      setIsProductsShowing(prev => !prev);
+    }
+  } 
 
   return (
     <div className="navbar-container flex">
@@ -59,9 +66,9 @@ const Navbar = () => {
               }) : "";
 
             let list = (
-              <li key={value.id}>
+              <li key={value.id} onClick={() => handleProductClick(value.name)}>
                 <>{navList}</>
-                {value.name === "Our Products" ? <ul className="products-list">{productList}</ul> : ""}
+                {value.name === "Our Products" ? <ul className={`products-list ${isProductsShowing ? 'show-products' : 'hide-products'}`}>{productList}</ul> : ""}
               </li>
             );
 

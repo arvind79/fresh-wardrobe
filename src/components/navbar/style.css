@@ -70,11 +70,32 @@
   margin-bottom: 0;
 }
 
+.products-list {
+  color: var(--color-primary-light);
+  font-family: 'Work Sans';
+  font-size: 1rem;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.products-list li {
+  margin-bottom: 1rem;
+}
+
 .show-nav {
   display: flex;
 }
 
 .hide-nav {
+  display: none;
+}
+
+.show-products {
+  display: block;
+}
+
+.hide-products {
   display: none;
 }
 
@@ -135,4 +156,14 @@
   .nav-links a {
     font-size: 1.125rem;
   }
+
+  .products-list {
+    margin-top: 0.5rem;
+    text-align: start;
+  }
+
+  .products-list li {
+    margin-bottom: 0.25rem;
+  }
+
 }
