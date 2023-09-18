@@ -4,7 +4,7 @@ import "react-multi-carousel/lib/styles.css";
 
 import { getProductCategories, getProducts } from "../../api";
 import './style.css';
-import Product from "../product/product";
+import Product from "../product/Product";
 import smallStar from '../../assets/images/star-2.svg'; 
 
 const responsive = {
