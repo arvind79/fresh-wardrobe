@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <>
       <TopNav />
-      <div className='header-container'>
+      <div className='header'>
         <Navbar />
         <Hero />
       </div>

@@ -81,3 +81,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+// for NavLink :- className={({isActive}) => isActive ? "active-nav" : ""}

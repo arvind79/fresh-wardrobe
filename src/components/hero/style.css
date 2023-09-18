@@ -1,0 +1,98 @@
+.hero {
+  position: relative;
+  padding-top: 0.5rem;
+}
+
+
+/******* Hero Title *******/
+
+.hero-title {
+  color: var(--color-primary-light);
+  font-family: 'Syne', sans-serif;
+  position: absolute;
+  top: 19rem; 
+  left: 1rem;
+  z-index: 99;
+}
+
+.hero-title h1 {
+  letter-spacing: 0.2rem;
+  font-weight: 800;
+}
+
+.title-2 {
+  color: transparent;
+  -webkit-text-stroke: 2px;
+  -webkit-text-stroke-color: var(--color-primary-light);
+  position: relative;
+  left: 5rem;
+}
+
+.title-3 {
+  position: relative;
+  left: 0.5rem;
+}
+
+
+/******* Model *******/
+
+.model {
+  position: relative;
+}
+
+.large-star {
+  position: absolute;
+  right: -8.5rem;
+}
+
+.model-img {
+  position: absolute;
+  top: 0rem;
+  right: -6.5rem;
+  z-index: 3;
+}
+
+
+/******* Orange and Blur Box *******/
+
+.orange-box {
+  width: 100%;
+  height: 22rem;
+  /* background: var(--color-optional-1); */
+  background: rgb(181 110 44);;
+  position: absolute;
+  top: 14rem;
+}
+
+.blur-box {
+  width: 100%;
+  height: 22rem;
+  background: var(--color-optional-1);
+  opacity: 0.2;
+  position: absolute;
+  top: 14rem;
+  z-index: 4;
+}
+
+/******* Line and Star *******/
+
+.line-star-container {
+  /* position: absolute; */
+  position: relative;
+  top: 31rem;
+  left: 8.5rem;
+  z-index: 11;
+}
+
+.line-star-container .line {
+  width: 36%;
+  height: 1px;
+  background: var(--color-primary-light);
+  position: absolute;
+  right: 24rem;
+  top: 2.8rem;
+}
+
+.line-star-container .small-star {
+  position: absolute;
+}
