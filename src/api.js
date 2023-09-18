@@ -9,3 +9,11 @@ export const getProducts = async () => {
     console.log("Error while calling getProducts from api, ", error);
   }
 }
+
+export const getProductCategories = async () => {
+  try {
+    return await axios.get(`${URL}/categories`);
+  } catch (error) {
+    console.log("Error while calling getProductCategories from api, ", error);
+  }
+}

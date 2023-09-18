@@ -6,3 +6,7 @@
 .carousel-button-group {
   position: absolute;
 }
+
+.highlight {
+  color: red;
+}

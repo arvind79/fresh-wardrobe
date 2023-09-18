@@ -2,9 +2,10 @@ import { useEffect, useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-import { getProducts } from "../../api";
+import { getProductCategories, getProducts } from "../../api";
 import './style.css';
 import Product from "../product/product";
+import smallStar from '../../assets/images/star-2.svg'; 
 
 const responsive = {
   desktop: {
@@ -25,17 +26,47 @@ const responsive = {
 };
 
 const Products = () => {
+  const [productCategories, setProductCategories] = useState([]);
   const [productsData, setProductsData] = useState([]);
 
-  const productsFun = async () => {
-    const data = await getProducts();
-    console.log(data.data);
-    setProductsData(data.data);
+  const [filteredProducts, setFilteredProducts] = useState(productsData);
+  const [currentCategory, setCurrentCategory] = useState("");
+
+  console.log(filteredProducts);
+
+  const productCategoriesFun = async () => {
+    const categories = await getProductCategories();
+    console.log(categories.data);
+    setProductCategories(categories.data);
   }
+
+  const productsFun = async () => {
+    const products = await getProducts();
+    // console.log(products.data);
+    setProductsData(products.data);
+    setFilteredProducts(products.data);
+  }
+
+  const handleCategoryClick = (e) => {
+    console.log(e.target.innerText);
+    setCurrentCategory(e.target.innerText);
+    filterData(e.target.innerText);
+  }
+
+  const filterData = (currentCategory) => {
+    const result = productsData.filter((product) => {
+      return product.category === currentCategory;
+    })
+    console.log("result", result);
+    setFilteredProducts(result);
+  }
+
+
 
   // console.log("productsData: ", productsData);
 
   useEffect( () => {
+    productCategoriesFun();
     productsFun();
   }, [])
 
@@ -51,11 +82,26 @@ const Products = () => {
   };
 
   return (
-    <>
+    <section className="products-main">
+      <div className="main-title">
+        <h2>New products</h2>
+        <img src={smallStar} alt="small star" />
+      </div>
+
+      <ul className="categories">
+        {
+          productCategories.map((category, index) => {
+            return (
+              <li key={index} className={currentCategory === category ? "highlight" : ""} onClick={handleCategoryClick}>{category}</li>
+            )
+          })
+        }
+      </ul>
+
       <div className="products">
         <Carousel responsive={responsive} infinite={true} swipeable={true} draggable={true} customButtonGroup={<ButtonGroup />} >
           {
-            productsData.map((item) => {
+            filteredProducts?.map((item) => {
               return (
                 <Product key={item.id} props={item} />
               )
@@ -64,7 +110,7 @@ const Products = () => {
       </Carousel>
       </div>
       
-    </>
+    </section>
   )
 }
 
