@@ -19,10 +19,10 @@ const Hero = () => {
       </div>
       <div className="orange-box"></div>
       <div className="blur-box"></div>
-      {/* <div className="line-star-container">
+      <div className="line-star-container">
         <div className="line"></div>
         <img src={smallStar} className='small-star' alt="small star" />
-      </div> */}
+      </div>
     </div>
   )
 }

@@ -136,6 +136,7 @@
   .navbar-container {
     padding-inline: 5rem 5rem;
     padding-top: 0.5rem;
+    overflow: visible;
   }
 
   .nav-upper .shopkart {
@@ -187,6 +188,7 @@
   .products-list {
     margin-top: 0.5rem;
     text-align: start;
+    /* position: absolute; */
   }
 
   .products-list li {
