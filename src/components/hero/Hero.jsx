@@ -11,16 +11,18 @@ const Hero = () => {
         <h1 className="title-2">2022</h1>
         <h1 className="title-3">Look</h1>
       </div>
-      <div className="model">
-        <img src={largeStar} className='large-star' alt="large star img" />
-        <img src={coverModel} className='model-img' alt="cover model img" />
+      <div className="model-container">
+        <div className="model">
+          <img src={largeStar} className='large-star' alt="large star img" />
+          <img src={coverModel} className='model-img' alt="cover model img" />
+        </div>
       </div>
       <div className="orange-box"></div>
       <div className="blur-box"></div>
-      <div className="line-star-container">
+      {/* <div className="line-star-container">
         <div className="line"></div>
         <img src={smallStar} className='small-star' alt="small star" />
-      </div>
+      </div> */}
     </div>
   )
 }

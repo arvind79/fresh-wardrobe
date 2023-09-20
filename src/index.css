@@ -50,6 +50,10 @@ h3 {
   font-size: 1.75rem;
 }
 
+h5 {
+  font-size: 0.875rem;
+}
+
 
 
 /* .btn {
@@ -101,12 +105,30 @@ button:focus-visible {
   }
 } */
 
-@media screen and (min-width: 391px) {
+@media screen and (min-width: 480px) {
+  h3 {
+    font-size: 2rem;
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  
+
+}
+
+@media screen and (min-width: 768px) {
   h3 {
     font-size: 2.75rem;
   }
 
   h5 {
     font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 8.4rem;
+    line-height: 75%;
   }
 }

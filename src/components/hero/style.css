@@ -1,5 +1,6 @@
 .hero {
   position: relative;
+  overflow: hidden;
   padding-top: 0.5rem;
 }
 
@@ -11,7 +12,8 @@
   font-family: 'Syne', sans-serif;
   position: absolute;
   top: 19rem; 
-  left: 1rem;
+  left: 2%;
+  /* right: 30%; */
   z-index: 99;
 }
 
@@ -25,30 +27,39 @@
   -webkit-text-stroke: 2px;
   -webkit-text-stroke-color: var(--color-primary-light);
   position: relative;
-  left: 5rem;
+  left: 28%;
 }
 
 .title-3 {
   position: relative;
-  left: 0.5rem;
+  left: 6%;
 }
 
 
 /******* Model *******/
 
+.model-container {
+  position: relative;
+  overflow: hidden;
+}
+
 .model {
   position: relative;
+  left: 15%;
+  top: 0;
 }
 
 .large-star {
   position: absolute;
-  right: -8.5rem;
+  left: 16%;
+  /* left: 6rem; */
 }
 
 .model-img {
-  position: absolute;
+  position: relative;
   top: 0rem;
-  right: -6.5rem;
+  /* right: 15%; */
+  /* left: 10%; */
   z-index: 3;
 }
 
@@ -77,22 +88,76 @@
 /******* Line and Star *******/
 
 .line-star-container {
+  width: 50%;
   /* position: absolute; */
   position: relative;
   top: 31rem;
-  left: 8.5rem;
+  /* left: 33%; */
   z-index: 11;
 }
 
 .line-star-container .line {
-  width: 36%;
+  width: 100%;
   height: 1px;
   background: var(--color-primary-light);
   position: absolute;
-  right: 24rem;
+  /* right: 94%; */
   top: 2.8rem;
 }
 
 .line-star-container .small-star {
   position: absolute;
+  right: 0;
+}
+
+
+/******* Media Queries for ipad and tablets *******/
+
+@media screen and (min-width: 480px) {
+  .hero-title {
+    top: 15rem;
+  }
+  
+  .model {
+    left: 35%;
+  }
+
+  .large-star {
+    z-index: 2;  
+  }
+
+  .model-img {
+    left: 10%;
+  }
+}
+
+
+/******* Media Queries for small screens and labtops *******/
+
+@media screen and (min-width: 768px) {
+  .hero-title {
+    top: 10rem;
+    left: 5%;
+  }
+
+  .title-2 {
+    left: 50%;
+  }
+
+  .model {
+    left: 53%;
+  }
+
+  .orange-box {
+    width: 70%;
+    right: 0;
+  }
+
+  .blur-box {
+    width: 70%;
+    right: 0;
+  }
+
+
+
 }

@@ -2,5 +2,21 @@
   /* opacity: 0.5;
   mix-blend-mode: overlay; */
   background: var(--color-bg-texture-1);
-  height: 46rem;
+  height: 49rem;
+}
+
+/******* Media Queries for ipad and tablets *******/
+
+@media screen and (min-width: 480px) {
+  
+}
+
+
+/******* Media Queries for small screens and labtops *******/
+
+@media screen and (min-width: 768px) {
+  .header {
+    /* height: 53rem; */
+  }
+
 }

@@ -3,6 +3,7 @@
   color: var(--color-secondary-light);
   padding: 0.9rem 1rem;
   justify-content: space-between;
+  overflow-x: hidden;
 }
 
 .topnav-container img {
@@ -41,7 +42,7 @@
 
 /*******Media Query for large screens ********/
 
-@media screen and (min-width: 391px) {
+@media screen and (min-width: 768px) {
   .topnav-container {
     padding-inline: 5.63rem;
     white-space: nowrap;
