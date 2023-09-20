@@ -82,7 +82,6 @@
   margin-top: 1rem;
   text-transform: uppercase;
   font-weight: 300;
-  position: absolute;
 }
 
 .products-list li {
@@ -188,7 +187,7 @@
   .products-list {
     margin-top: 0.5rem;
     text-align: start;
-    /* position: absolute; */
+    position: absolute;
   }
 
   .products-list li {
