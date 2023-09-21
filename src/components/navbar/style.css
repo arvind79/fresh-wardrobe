@@ -29,7 +29,12 @@
   background: var(--color-bg-texture-1);
   color: white;
   font-size: 1.5rem;
-  /* border: 1px solid white; */
+  border: 1.5px solid white;
+  padding: 0.05rem;
+}
+
+.nav-toggle-btn svg{
+  display: block;
 }
 
 
