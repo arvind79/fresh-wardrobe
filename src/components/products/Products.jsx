@@ -110,6 +110,7 @@ const Products = () => {
       </ul>
 
       <Carousel
+        className="carousel"
         responsive={responsive}
         infinite={true}
         swipeable={true}
