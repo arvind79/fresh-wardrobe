@@ -34,12 +34,13 @@ const Products = () => {
   const [filteredProducts, setFilteredProducts] = useState(productsData);
   const [currentCategory, setCurrentCategory] = useState("");
 
-  console.log(filteredProducts);
+  // console.log(filteredProducts);
 
   const productCategoriesFun = async () => {
     const categories = await getProductCategories();
-    console.log(categories.data);
+    // console.log(categories.data);
     setProductCategories(categories.data);
+    setCurrentCategory(categories.data[0]);
   };
 
   const productsFun = async () => {
@@ -50,16 +51,15 @@ const Products = () => {
   };
 
   const handleCategoryClick = (e) => {
-    console.log(e.target.innerText);
+    // console.log(e.target.innerText);
     setCurrentCategory(e.target.innerText);
-    filterData(e.target.innerText);
   };
 
   const filterData = (currentCategory) => {
     const result = productsData.filter((product) => {
       return product.category.toLowerCase() === currentCategory.toLowerCase();
     });
-    console.log("result", result);
+    // console.log("result", result);
     setFilteredProducts(result);
   };
 
@@ -69,6 +69,10 @@ const Products = () => {
     productCategoriesFun();
     productsFun();
   }, []);
+
+  useEffect(() => {
+    filterData(currentCategory);
+  }, [productsData, currentCategory]);
 
   const ButtonGroup = ({ next, previous, goToSlide, ...rest }) => {
     const {

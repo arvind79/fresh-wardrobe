@@ -51,9 +51,15 @@
 /******* Navbar Lower *******/
 
 .nav-lower {
-  height: 87vh;
+  height: 78vh;
   justify-content: center;
   padding-top: 7rem;
+  position: absolute;
+  background: var(--color-bg-texture-1);
+  left: 0;
+  top: 7rem;
+  width: 100%;
+  z-index: 999;
 }
 
 .nav-links {
@@ -94,16 +100,15 @@
   margin-bottom: 1rem;
 }
 
-/* .active-nav {
-  background-color: red;
-} */
-
 .show-nav {
-  display: flex;
+  /* display: flex; */
+  transform: translateX(0);
+  transition: all ease-in-out 750ms;
 }
 
 .hide-nav {
-  display: none;
+  transform: translateX(100%);
+  transition: all ease-in-out 750ms;
 }
 
 .show-products {
@@ -170,9 +175,15 @@
 
   .nav-lower {
     display: flex;
+    transform: translateX(0);
     justify-content: flex-start;
+    align-items: flex-start;
     padding-top: 0.8rem;
-    height: fit-content;
+    height: auto;
+    background: transparent;
+    position: relative;
+    top: 0;
+    height: auto;
   }
 
   .nav-links {

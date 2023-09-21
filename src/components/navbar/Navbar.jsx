@@ -30,10 +30,10 @@ const Navbar = () => {
   };
 
   const handleProductClick = (valueName) => {
-    if(valueName == "Our Products") {
-      setIsProductsShowing(prev => !prev);
+    if (valueName == "Our Products") {
+      setIsProductsShowing((prev) => !prev);
     }
-  } 
+  };
 
   return (
     <div className="navbar-container flex">
@@ -49,31 +49,40 @@ const Navbar = () => {
       </div>
 
       <div className="line"></div>
-
+    
       <div className={`nav-lower ${isNavShowing ? "show-nav" : "hide-nav"}`}>
         <ul className={`nav-links`}>
+
           {linksArray.map((value) => {
+            let navList = <NavLink to={"/"}>{value.name}</NavLink>;
 
-            let navList = (
-                <NavLink to={"/"}>{value.name}</NavLink>
-            );
-
-            const productList = 
-              value.name === "Our Products" ? value.child.map((product) => {
-                return (
-                  <li key={product.id}>{product.name}</li>
-                )
-              }) : "";
+            const productList =
+              value.name === "Our Products"
+                ? value.child.map((product) => {
+                    return <li key={product.id}>{product.name}</li>;
+                  })
+                : "";
 
             let list = (
               <li key={value.id} onClick={() => handleProductClick(value.name)}>
                 <>{navList}</>
-                {value.name === "Our Products" ? <ul className={`products-list ${isProductsShowing ? 'show-products' : 'hide-products'}`}>{productList}</ul> : ""}
+                {value.name === "Our Products" ? (
+                  <ul
+                    className={`products-list ${
+                      isProductsShowing ? "show-products" : "hide-products"
+                    }`}
+                  >
+                    {productList}
+                  </ul>
+                ) : (
+                  ""
+                )}
               </li>
             );
 
             return list;
           })}
+          
         </ul>
       </div>
     </div>
