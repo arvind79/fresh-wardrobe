@@ -1,0 +1,65 @@
+.product {
+  color: #000;
+  padding-inline: 0.3rem;
+}
+
+/******* Product Image Container *******/
+
+.product-img-container {
+  width: 19.375rem;
+  height: 18.125rem;
+  position: relative;
+}
+
+.product-img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
+
+.product-arrow-btn {
+  background: var(--color-primary-dark);
+  color: var(--color-primary-light);
+  position: absolute;
+  right: 0;
+  bottom: 2rem;
+  padding: 0.4rem 0.4rem;
+  cursor: pointer;
+}
+
+.product-arrow-btn svg {
+  font-size: 1.5rem;
+  display: block;
+  font-weight: 600;
+}
+
+/******* Product Detail Container *******/
+
+.product-detail-container {
+  max-width: 19.375rem;
+  padding: 0rem 0.2rem;
+  font-variant-numeric: lining-nums;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.product-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.product-desc {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.875rem;
+  color: var(--grey-scale-400);
+}
+
+.product-price {
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  font-size: 1.225rem;
+}

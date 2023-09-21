@@ -1,18 +1,24 @@
+import { FiArrowUpRight } from 'react-icons/fi';
+
 import "./style.css";
 
-const Product = ({ props }) => {
+const Product = ( props ) => {
+  
   const { image, title, category, description, price} = props;
 
   return (
     <div className="product">
-      <div>
-        <img src={image} alt={title} />
+      <div className="product-img-container">
+        <img src={image} className="product-img" alt={title} />
+        <button className="product-arrow-btn">
+          <FiArrowUpRight />
+        </button>
       </div>
-      <div>
-        <h5>{category}</h5>
-        <h4>{title}</h4>
-        <p>{description}</p>
-        <span>{price}</span>
+      <div className="product-detail-container">
+        {/* <h5>{category}</h5> */}
+        <h4 className="product-title">{title.substring(0, 23)}</h4>
+        <p className="product-desc">{description.substring(0, 120)}</p>
+        <span className="product-price">${price}</span>
       </div>
     </div>
   );

@@ -15,6 +15,21 @@
   font-size: 0.625rem;
 }
 
+.topnav-container img,
+.topnav-container .left-side span,
+.login,
+.follow,
+.right-side ul li {
+  cursor: pointer;
+}
+
+.topnav-container .left-side span:hover,
+.login:hover,
+.follow:hover,
+.right-side ul li:hover {
+  color: var(--color-secondary-dark);
+}
+
 .left-side{
   gap: 0.5rem;
   margin-right: auto;

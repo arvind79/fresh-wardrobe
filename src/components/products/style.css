@@ -1,12 +1,95 @@
-.product img {
-  width: 200px;
-  height: 200px;
+.products-section {
+  padding: 1rem 0 1rem 1.5rem;
+  color: #000;
 }
 
-.carousel-button-group {
+.section-title {
+  width: 100%;
+  border-bottom: 1px solid #000;
+  position: relative;
+}
+
+.section-title h2 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+.section-title img {
   position: absolute;
+  bottom: -0.7rem;
+  left: -1rem;
+}
+
+.categories {
+  display: flex;
+  align-items: center;
+  font-family: 'Work Sans', sans-serif;
+  gap: 1rem;
+  padding: 1rem 0.1rem;
+}
+
+.category-item {
+  text-transform: capitalize;
+  cursor: pointer;
+  font-size: 0.875rem;
 }
 
 .highlight {
-  color: red;
+  color: #000;
+  font-size: 1.125rem;
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+}
+
+.carousel-button-group {
+  position: relative;
+  left: -1.5rem;
+}
+
+.both-arrows-container {
+  padding: 0.5rem 0 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.long-left-arrow,
+.long-right-arrow {
+  background: transparent;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* .products img {
+  width: 19.375rem;
+  height: 18.125rem;
+} */
+
+
+/******* Media Queries for ipad and tablets *******/
+
+@media screen and (min-width: 480px) {
+
+
+}
+
+
+/******* Media Queries for small screens and labtops *******/
+
+@media screen and (min-width: 768px) {
+  .products-section {
+    padding: 2rem 0 2rem 3.5rem;
+    color: #000;
+  }
+  
+  .section-title {
+    width: fit-content;
+    border-bottom: 1px solid #000;
+    position: relative;
+  }
+
+ 
+
 }
