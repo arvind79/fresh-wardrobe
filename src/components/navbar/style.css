@@ -24,6 +24,7 @@
 
 .nav-upper .right-item {
   display: none;
+  cursor: pointer;
 }
 
 .nav-upper .btn {

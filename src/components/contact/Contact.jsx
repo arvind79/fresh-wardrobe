@@ -91,8 +91,8 @@ const Contact = () => {
 
       <div className="contact-title">
         <h1>Get</h1>
-        <h1>In</h1>
-        <h1>Touch</h1>
+        <h1 className="in-title">In</h1>
+        <h1 className="touch-title">Touch</h1>
         <button type="submit" form="userData-form" className="send-btn">Send</button>
       </div>
     </section>

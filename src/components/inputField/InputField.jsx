@@ -7,6 +7,7 @@ const InputField = (props) => {
   return (
     <div className="input-container">
       <input
+        className="input-field"
         type={props.type}
         name={props.name}
         placeholder={props.placeholder}

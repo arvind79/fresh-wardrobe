@@ -1,6 +1,7 @@
 .contact-section {
   padding: 3.88rem 1rem 3.06rem 1rem;
   background: url('../../assets/images/contact-background.svg');
+  background-position: center;
 }
 
 .form-title {
@@ -21,4 +22,105 @@
   font-size: 1.125rem;
   font-family: 'Work Sans', sans-serif;
   color: var(--grey-scale-200);
+}
+
+.contact-form {
+  margin: 3.5rem 0 3.5rem;
+}
+
+.contact-title {
+  position: relative;
+}
+
+.contact-title h1 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  color: var(--color-primary-light);
+  text-transform: uppercase;
+  line-height: 67%;
+}
+
+.send-btn {
+  position: absolute;
+  right: 0;
+  top: -28px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.875rem;
+  color: var(--color-optional-1);
+  background: transparent;
+  border-radius: 50%;
+  border: 1px solid var(--color-optional-1);
+  padding: 0 1.87rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  aspect-ratio: 1;
+}
+
+
+/******* Media Queries for ipad and tablets *******/
+
+@media screen and (min-width: 480px) {
+  .contact-form {
+    width: 80%;
+    margin-inline: auto;
+  }
+
+  .contact-title h1 {
+    line-height: 72%;
+  }
+
+  .send-btn {
+    font-size: 1.225rem;
+    padding: 0 2.30rem;
+  }
+
+}
+
+
+/******* Media Queries for small screens and labtops *******/
+
+@media screen and (min-width: 768px) {
+  .contact-section {
+    padding: 5rem 6rem 2rem 6rem;
+  }
+
+  .form-section {
+    display: flex;
+    align-items: baseline;
+    gap: 10rem;
+  }
+
+  .form-title {
+    text-align: left;
+    width: 35%;
+    margin-inline: 0;
+  }
+
+  .contact-form {
+    margin: 0;
+    width: 45%;
+    margin-right: auto;
+  }
+
+  .contact-title h1 {
+    margin-top: 4rem;
+    font-size: 8vw;
+  }
+
+  .in-title,
+  .touch-title {
+    display: inline;
+  }
+
+  .touch-title {
+    margin-left: 1rem;
+  }
+
+  .send-btn {
+    /* font-size: 1.625rem; */
+    padding: 0 3.40rem;
+    top: -50px;
+    font-size: 2vw;
+  }
+
 }
