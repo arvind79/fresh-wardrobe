@@ -1,0 +1,24 @@
+.contact-section {
+  padding: 3.88rem 1rem 3.06rem 1rem;
+  background: url('../../assets/images/contact-background.svg');
+}
+
+.form-title {
+  text-align: center;
+  width: 80%;
+  margin-inline: auto;
+}
+
+.title-name {
+  font-size: 1.625rem;
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  color: var(--grey-scale-200);
+  margin-bottom: 0.5rem;
+}
+
+.title-desc {
+  font-size: 1.125rem;
+  font-family: 'Work Sans', sans-serif;
+  color: var(--grey-scale-200);
+}

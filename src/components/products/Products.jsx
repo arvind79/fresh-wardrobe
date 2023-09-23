@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-import { getProductCategories, getProducts } from "../../api";
+import { getProductCategories, getProducts } from "../utils/api";
 import "./style.css";
 import Product from "../product/Product";
 import smallStar from "../../assets/images/small-star-2.svg";

@@ -14,6 +14,7 @@
 
 :root {
   --grey-scale-1000: #000;
+  --grey-scale-200: rgba(255, 255, 255, 0.5);
   --grey-scale-400: rgba(22, 22, 21, 0.8);
 
   --color-primary-light: #fff;
@@ -28,10 +29,15 @@
   --transition: all 300ms ease-in-out;  
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Poppins', 'Syne', 'Work Sans', sans-serif;
   line-height: 1.5;
   overflow-x: hidden;
+  position: relative;
 }
 
 h1,
