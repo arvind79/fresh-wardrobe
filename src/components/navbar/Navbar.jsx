@@ -5,6 +5,7 @@ import "./style.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseSharp } from "react-icons/io5";
 import { getProductCategories } from "../utils/api";
+import smallStar1 from "../../assets/images/small-star-1.svg";
 
 // const linksArray = [
 //   { name: "Home", id: "home" },
@@ -27,6 +28,7 @@ const Navbar = () => {
   const [isNavShowing, setIsNavShowing] = useState(false);
   const [isProductsShowing, setIsProductsShowing] = useState(false);
   const [categories, setCategories] = useState([]);
+  const [isNavLinkClicked, setIsNavLinkClicked] = useState(false);
 
   let obj = {
     name: "Our Products",
@@ -68,6 +70,7 @@ const Navbar = () => {
     if (valueName == "Our Products") {
       setIsProductsShowing((prev) => !prev);
     }
+    setIsNavLinkClicked((prev) => !prev);
   };
 
   return (
@@ -83,7 +86,9 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className="line"></div>
+      <div className="line">
+        <img src={smallStar1} className="small-star-1" alt="small star 1" />
+      </div>
     
       <div className={`nav-lower ${isNavShowing ? "show-nav" : "hide-nav"}`}>
         <ul className={`nav-links`}>

@@ -25,6 +25,7 @@
   --color-optional-1: rgba(240, 126, 21, 1);
 
   --color-bg-texture-1: url(./assets/images/background-effect.png), rgb(0 0 0 / 92%);
+  --color-bg-texture-2: url(./assets/images/background-effect.png), rgb(16 16 16);
 
   --transition: all 300ms ease-in-out;  
 }
