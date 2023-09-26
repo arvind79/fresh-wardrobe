@@ -1,29 +1,64 @@
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import "./style.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseSharp } from "react-icons/io5";
+import { getProductCategories } from "../utils/api";
 
-const linksArray = [
-  { name: "Home", id: "home" },
-  { name: "About", id: "about" },
-  {
-    name: "Our Products",
-    id: "product",
-    child: [
-      { name: "Product 1", id: "p1" },
-      { name: "Product 2", id: "p2" },
-      { name: "Product 3", id: "p3" },
-      { name: "Product 4", id: "p4" },
-    ],
-  },
-  { name: "Contact Us", id: "contact" },
-];
+// const linksArray = [
+//   { name: "Home", id: "home" },
+//   { name: "About", id: "about" },
+//   {
+//     name: "Our Products",
+//     id: "product",
+//     child: [
+//       { name: "Product 1", id: "p1" },
+//       { name: "Product 2", id: "p2" },
+//       { name: "Product 3", id: "p3" },
+//       { name: "Product 4", id: "p4" },
+//     ],
+//   },
+//   { name: "Contact Us", id: "contact" },
+// ];
+
 
 const Navbar = () => {
   const [isNavShowing, setIsNavShowing] = useState(false);
   const [isProductsShowing, setIsProductsShowing] = useState(false);
+  const [categories, setCategories] = useState([]);
+
+  let obj = {
+    name: "Our Products",
+    id: "product",
+    child: categories.map((category, index) => {
+      return (
+        {
+          name: category,
+          id: index,
+        }
+      )
+    })
+  }
+
+  const linksArray = [
+    { name: "Home", id: "home" },
+    { name: "About", id: "about" },
+    obj,
+    { name: "Contact Us", id: "contact" },
+  ]
+
+  useEffect(() => {
+    getCategories();
+  }, [])
+
+  const getCategories = async () => {
+    let categoryList = await getProductCategories();
+    categoryList = categoryList.data;
+    setCategories(categoryList);
+  }
+
+  console.log("navbar categories: ", categories);
 
   const handleBtnClick = () => {
     setIsNavShowing((prev) => !prev);
